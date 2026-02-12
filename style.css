@@ -1,0 +1,177 @@
+:root{--primary:#60a5fa;--dark:#1f2937;--light:#f5f7fb;--accent:#34d399}
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:"Noto Sans Thai",system-ui,Arial,sans-serif;
+color:#1f2937;
+background:#f5f7fb;
+line-height:1.8;
+font-size:18px;
+}
+
+a{text-decoration:none;color:inherit}
+
+.container{max-width:1000px;margin:auto;padding:0 16px}
+
+header{
+position:sticky;
+top:0;
+background:#fff;
+border-bottom:1px solid #e5e7eb;
+box-shadow:0 6px 18px rgba(2,6,23,.05);
+z-index:10
+}
+
+nav{
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:12px 0
+}
+
+.brand{display:flex;align-items:center;gap:10px;font-weight:700}
+
+.logo{
+width:36px;height:36px;border-radius:10px;
+background:linear-gradient(135deg,var(--primary),#6366f1);
+display:grid;place-items:center;color:#fff
+}
+
+.menu{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+.menu a{padding:8px 12px;border-radius:12px;font-weight:600}
+.menu a:hover{background:#eaf2ff}
+
+.hero{background:linear-gradient(180deg,#f0f7ff,#f5f7fb)}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;padding:60px 0}
+
+.card{
+background:#fff;
+border:1px solid #e6eaf2;
+border-radius:20px;
+box-shadow:0 8px 18px rgba(2,6,23,.05)
+}
+
+.grid{display:grid;gap:16px}
+.grid-2{grid-template-columns:1fr 1fr}
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+section{padding:56px 0}
+h2{text-align:center}
+
+.pill{
+display:inline-block;
+background:#ecfeff;
+border:1px solid #bae6fd;
+color:#0369a1;
+padding:6px 10px;
+border-radius:999px;
+font-size:13px
+}
+
+.feature{padding:18px}
+.project{padding:18px}
+
+.list li{margin:8px 0}
+
+.teachers{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+max-width:900px;
+margin:auto;
+}
+
+.teacher{text-align:center}
+.teacher img{
+width:200px;
+height:300px;
+object-fit:cover;
+border-radius:14px;
+box-shadow:0 6px 16px rgba(0,0,0,.15)
+}
+
+footer{
+background:#0b1220;
+color:#e2e8f0;
+padding:30px 0;
+margin-top:40px
+}
+
+.center{text-align:center}
+.small{font-size:13px;color:#94a3b8}
+
+@media(max-width:900px){
+.hero-inner{grid-template-columns:1fr}
+.grid-2,.grid-3{grid-template-columns:1fr}
+}
+.teachers-row{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-bottom:40px;
+flex-wrap:wrap;
+}
+
+.teachers-row.one .teacher{
+width:260px;
+}
+.teacher b{
+display:block;
+text-align:center;
+font-size:20px;
+margin-top:8px;
+}
+
+.teacher p{
+text-align:center;
+margin-top:4px;
+}
+
+.teachers-row.two .teacher{
+width:240px;
+}
+
+.teacher{
+text-align:center;
+}
+
+.teacher img{
+width:220px;
+height:320px;
+object-fit:cover;
+border-radius:16px;
+box-shadow:0 8px 18px rgba(0,0,0,.18);
+margin-bottom:10px;
+}
+.teacher b{
+display:block;
+text-align:center;
+font-size:20px;
+margin-top:8px;
+}
+
+.teacher p{
+text-align:center;
+margin-top:4px;
+}
+.course-list{
+    margin: 5px 0;
+    padding-left: 18px;
+}
+.course-list li{
+    margin: 3px 0;
+}
+
+/* SNOW EFFECT */
+
+
+
+
+
+
