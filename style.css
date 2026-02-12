@@ -1,14 +1,27 @@
-:root{--primary:#60a5fa;--dark:#1f2937;--light:#f5f7fb;--accent:#34d399}
+:root{
+--primary:#4da3ff;
+--dark:#1e293b;
+--light:#eef3f9;
+--accent:#7dd3fc;
+}
+
 *{box-sizing:border-box}
 
 body{
 margin:0;
 font-family:"Noto Sans Thai",system-ui,Arial,sans-serif;
-color:#1f2937;
-background:#f5f7fb;
+color:#1e293b;
+
+/* พื้นหลังสบายตา */
+background:
+radial-gradient(circle at 20% 20%, #ffffff 0%, transparent 35%),
+radial-gradient(circle at 80% 30%, #f0f6ff 0%, transparent 40%),
+linear-gradient(180deg,#f7fafe,#eef3f9);
+
 line-height:1.8;
 font-size:18px;
 }
+
 
 a{text-decoration:none;color:inherit}
 
@@ -17,11 +30,14 @@ a{text-decoration:none;color:inherit}
 header{
 position:sticky;
 top:0;
-background:#fff;
-border-bottom:1px solid #e5e7eb;
-box-shadow:0 6px 18px rgba(2,6,23,.05);
+background:rgba(255,255,255,0.7);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border-bottom:1px solid rgba(0,0,0,.05);
+box-shadow:0 8px 25px rgba(0,0,0,.06);
 z-index:10
 }
+
 
 nav{
 display:flex;
@@ -40,7 +56,10 @@ display:grid;place-items:center;color:#fff
 
 .menu{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px}
 .menu a{padding:8px 12px;border-radius:12px;font-weight:600}
-.menu a:hover{background:#eaf2ff}
+.menu a:hover{
+background:#e6f1ff;
+color:#2563eb;
+}
 
 .hero{background:linear-gradient(180deg,#f0f7ff,#f5f7fb)}
 .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;padding:60px 0}
@@ -169,6 +188,7 @@ margin-top:4px;
 }
 
 /* SNOW EFFECT */
+
 
 
 
