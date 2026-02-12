@@ -268,9 +268,39 @@
 </div>
 </footer>
 
+<script>
+// เลือก element ที่อยากให้มีอนิเมชั่น
+const revealElements = document.querySelectorAll(
+".card, .teacher, section h2"
+);
+
+// ใส่ class เริ่มต้น
+revealElements.forEach((el,i)=>{
+el.classList.add("reveal");
+el.classList.add("reveal-delay-"+((i%4)+1));
+});
+
+// ตรวจตอนเลื่อน
+function revealOnScroll(){
+const windowHeight = window.innerHeight;
+
+revealElements.forEach(el=>{
+const elementTop = el.getBoundingClientRect().top;
+
+if(elementTop < windowHeight - 80){
+el.classList.add("show");
+}
+});
+}
+
+// เรียกครั้งแรก + ตอนเลื่อน
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
 
 </body>
 </html>
+
 
 
 
