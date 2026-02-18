@@ -1,233 +1,663 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>แผนกเทคโนโลยีสารสนเทศ - วิทยาลัยเทคนิคพิมาย</title>
+:root {
+    --primary: #3b82c9;
+    --primary-hover: #2563b5;
+    --primary-light: #e8f2fc;
+    --dark: #2d3748;
+    --dark-soft: #4a5568;
+    --gray: #64748b;
+    --gray-light: #e2e8f0;
+    --bg: #f8fafc;
+    --white: #ffffff;
+    --accent: #2d9d78;
+    --radius: 12px;
+    --radius-lg: 16px;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.06);
+    --header-h: 64px;
+    --safe-top: env(safe-area-inset-top, 0);
+    --safe-bottom: env(safe-area-inset-bottom, 0);
+    /* เว้นระยะจากขอบ – คอม */
+    --space-edge: 24px;
+    --space-section: 40px;
+}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
+* {
+    box-sizing: border-box;
+}
 
-<link rel="stylesheet" href="style.css">
-</head>
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 150px;
+    min-height: 100%;
+}
 
-<body>
-
-<header>
-<div class="container">
-<nav>
-<div class="brand">
-<div class="logo">IT</div>
-<div>แผนกเทคโนโลยีสารสนเทศ • วิทยาลัยเทคนิคพิมาย</div>
-</div>
-
-<div class="menu">
-<a href="#top">หน้าแนะนำแผนก</a>
-<a href="#about">เกี่ยวกับแผนก</a>
-<a href="#courses">หลักสูตร</a>
-<a href="#projects">ผลงานนักศึกษา</a>
-<a href="#teachers">ครูผู้สอน</a>
-</div>
-</nav>
-</div>
-</header>
-
-<!-- HERO -->
-<section class="hero" id="top">
-<div class="container hero-inner">
-
-<div>
-<span class="pill">แผนกเทคโนโลยีสารสนเทศ</span>
-<h1>เรียนรู้ไอทีตั้งแต่พื้นฐาน ถึงพัฒนาโปรเจกต์จริง</h1>
-<p>
-เน้นทักษะที่ใช้ได้จริง เช่น เขียนโปรแกรม สร้างเว็บไซต์ ดูแลระบบเครือข่าย และความปลอดภัยไซเบอร์ พร้อมฝึกงานกับสถานประกอบการ
-</p>
-</div>
-
-<div class="card hero-visual">
-<div class="grid grid-2">
-
-<div class="feature card">
-<div class="pill">ทักษะ</div>
-<h3>การเขียนโปรแกรม</h3>
-<p>HTML, CSS, JavaScript, Python, C#</p>
-</div>
-
-<div class="feature card">
-<div class="pill">ทักษะ</div>
-<h3>เครือข่าย</h3>
-<p>LAN/WAN, Router, Server</p>
-</div>
-
-<div class="feature card">
-<div class="pill">ทักษะ</div>
-<h3>ฐานข้อมูล</h3>
-<p>MySQL, SQL Server, Firebase</p>
-</div>
-
-<div class="feature card">
-<div class="pill">ทักษะ</div>
-<h3>ความปลอดภัยไซเบอร์</h3>
-<p>พื้นฐานความปลอดภัยไซเบอร์</p>
-</div>
-
-</div>
-</div>
-</div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-<div class="container">
-<h2>เกี่ยวกับแผนก</h2>
-<div class="card box">
-<p>
-แผนกเทคโนโลยีสารสนเทศ (Information Technology: IT) มุ่งพัฒนาผู้เรียนให้มีความรู้ด้านคอมพิวเตอร์ เครือข่าย และการพัฒนาซอฟต์แวร์ สามารถสร้างผลงานจริงและทำงานร่วมกับผู้อื่นได้ พร้อมคุณธรรมและจริยธรรมในการใช้เทคโนโลยี
-</p>
-
-<ul class="list">
-<li>เรียนแบบลงมือปฏิบัติ (Project-Based Learning)</li>
-<li>มีอาจารย์ที่ปรึกษาโครงงาน</li>
-<li>ฝึกงานกับบริษัท/หน่วยงานจริง</li>
-</ul>
-</div>
-</div>
-</section>
-
-<!-- COURSES -->
-<section id="courses">
-<div class="container">
-<h2>หลักสูตร</h2>
-
-<div class="grid grid-3">
-
-<div class="card feature">
-<div class="pill">ปีที่ 1</div>
-<h3>พื้นฐานคอมพิวเตอร์</h3>
-<p>การใช้ระบบปฏิบัติการ ฮาร์ดแวร์ และซอฟต์แวร์สำนักงาน</p>
-</div>
-
-<div class="card feature">
-<div class="pill">ปีที่ 2</div>
-<h3>เขียนโปรแกรม & เว็บไซต์</h3>
-<p>HTML, CSS, JavaScript และพื้นฐานฐานข้อมูล</p>
-</div>
-
-<div class="card feature">
-<div class="pill">ปีที่ 3</div>
-<h3>เครือข่าย & เซิร์ฟเวอร์</h3>
-<p>ติดตั้งเครือข่าย จัดการผู้ใช้ และดูแลระบบ</p>
-</div>
-
-<div class="card feature">
-<div class="pill">ปีที่ 4</div>
-<h3>โครงงาน (Project)</h3>
-<p>พัฒนาแอป/เว็บไซต์จริง พร้อมนำเสนอผลงาน</p>
-</div>
-
-<div class="card feature">
-<div class="pill">เสริม</div>
-<h3>ความปลอดภัยไซเบอร์</h3>
-<p>แนวคิดป้องกันภัยคุกคามและการใช้งานอย่างปลอดภัย</p>
-</div>
-
-<div class="card feature">
-<div class="pill">เสริม</div>
-<h3>กราฟิก & มัลติมีเดีย</h3>
-<p>ออกแบบ UI/UX และตัดต่อวิดีโอพื้นฐาน</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-<div class="container">
-<h2>ผลงานนักศึกษา</h2>
-
-<div class="grid grid-3">
-<div class="card project">
-<span class="tag">Web App</span>
-<h3>ระบบเช็คชื่อออนไลน์</h3>
-<p class="small">ใช้ HTML/CSS/JS + Firebase</p>
-</div>
-
-<div class="card project">
-<span class="tag">Mobile</span>
-<h3>แอปจองห้องเรียน</h3>
-<p class="small">Flutter + Database</p>
-</div>
-
-<div class="card project">
-<span class="tag">IoT</span>
-<h3>ระบบรดน้ำอัตโนมัติ</h3>
-<p class="small">ESP8266 + Sensor</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- TEACHERS -->
-<section id="teachers">
-<h2 class="center">ครูผู้สอน</h2>
-
-<!-- แถวที่ 1 -->
-<div class="teachers-row one">
-    <div class="teacher">
-        <img src="1.jpg">
-        <b>ว่าที่ร.ต.วัชรินทร์ สิทธิจันทร์</b>
-        <p>หัวหน้า แผนกเทคโนโลยีสารสนเทศ</p>
-    </div>
-</div>
-
-<!-- แถวที่ 2 -->
-<div class="teachers-row two">
-    <div class="teacher">
-        <img src="2.jpg">
-        <b>นายวรวุฒิ พุฒกลาง</b>
-        <p>ครู ชำนาญการพิเศษ</p>
-    </div>
-
-    <div class="teacher">
-        <img src="3.jpg">
-        <b>นางฐิตาพร ตีรวัฒนประภา</b>
-        <p>ครูผู้ช่วย</p>
-    </div>
-</div>
-
-<!-- แถวที่ 3 -->
-<div class="teachers-row one">
-    <div class="teacher">
-        <img src="4.jpg">
-        <b>นางสาวขวัญฤทัย ยิ่งแก้ว</b>
-        <p>ครูอัตราจ้าง</p>
-    </div>
-</div>
-
-</section>
+body {
+    margin: 0;
+    font-family: "Noto Sans Thai", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    font-size: 16px;
+    position: relative;
+    z-index: 0;
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+    /* ท้องฟ้า + ทุ่งหญ้า (เห็นชัด) – เลื่อนตามหน้าจอ */
+    background: linear-gradient(to bottom, #c8e4f5 0%, #dceef8 28%, #7dd85a 32%, #4caf50 85%, #3d9b40 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 
 
-<footer>
-<div class="container center">
-<h3>โครงงานเว็บไซต์แผนกเทคโนโลยีสารสนเทศ</h3>
-<p>วิทยาลัยเทคนิคพิมาย</p>
-<p>ปีการศึกษา 2568</p>
+/* กล่องเนื้อหา – เว้นระยะจากขอบให้สวยงาม */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 var(--space-edge);
+}
 
-<p><b>ผู้จัดทำ</b></p>
-<p>
-1) ชัยศิริ ครุธน้อย<br>
-2) นางสาวภัทรภา โปยขุนทด<br>
-3) นายปฏิพล สุมรัมย์
-</p>
+/* ========== HEADER – ไม้ฟาร์ม โทนอ่อน ========== */
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: var(--safe-top);
+    padding-bottom: 8px;
+    background: #9a6b3d;
+    color: #fff;
+    border-bottom: 4px solid #6d4a2a;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    z-index: 100;
+}
 
-<p><b>ครูที่ปรึกษา</b></p>
-<p>ว่าที่ร.ต.วัชรินทร์ สิทธิจันทร์</p>
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0;
+    padding: 8px 0 0;
+}
 
-<p class="small">เว็บไซต์นี้จัดทำเพื่อการศึกษา</p>
-</div>
-</footer>
+/* ปุ่มเปิดเมนูมือถือ – ซ่อนบนคอม */
+.menu-toggle {
+    display: none;
+}
 
-</body>
-</html>
+/* บรรทัดแรก: แบรนด์ (จัดกึ่งกลาง เว้นขอบสวยงาม) */
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #fff;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.brand > div:last-child {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+/* โลโก้ IT สีฟ้าสบายตา */
+/* กล่องเล็ก (โลโก้ IT) – โทนฟ้าสบายตา */
+.logo {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: var(--radius);
+    background: linear-gradient(135deg, #8ec9f8, #6bb3f0);
+    box-shadow: 0 2px 8px rgba(107, 179, 240, 0.3);
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* บรรทัดสอง: เมนูลิงก์ (คอม – จัดกึ่งกลาง) */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    width: 100%;
+}
+
+.menu a {
+    padding: 6px 10px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.95);
+    transition: background 0.2s, color 0.2s;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ========== HERO โทนเดียวกับท้องฟ้า ========== */
+.hero {
+    background: linear-gradient(180deg, #c8e4f5 0%, #d4ebf7 40%, #dceef800 100%);
+    padding: var(--space-section) 0 calc(var(--space-section) + 70px);
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--dark);
+    margin: 12px 0 16px;
+}
+
+.hero p {
+    color: var(--gray);
+    font-size: 1rem;
+    margin: 0;
+    max-width: 480px;
+}
+
+.hero .pill {
+    margin-bottom: 4px;
+}
+
+.hero-visual {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: none;
+}
+
+.hero-visual .grid-2 {
+    gap: 12px;
+}
+
+.hero-visual .card {
+    background: linear-gradient(#cce8f7);
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* ========== CARDS & PILLS – การ์ดไม้ โทนอ่อน สบายตา ========== */
+.card {
+    background: #b6def3;
+    border: none;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 12px rgba(92, 59, 30, 0.06);
+    transition: box-shadow 0.2s;
+}
+
+
+.pill {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.feature.card {
+    padding: 20px;
+}
+
+.feature h3 {
+    font-size: 1rem;
+    margin: 8px 0 6px;
+    color: var(--dark);
+}
+
+.feature p {
+    font-size: 0.875rem;
+    color: var(--gray);
+    margin: 0;
+}
+
+/* ========== SECTIONS ========== */
+section {
+    padding: var(--space-section) 0;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin: 0 0 24px;
+    padding-top: 12px;
+    border-top: 5px solid var(--primary);
+    display: inline-block;
+}
+
+section .card.box {
+    padding: 24px;
+}
+
+section .card.box p {
+    margin: 0 0 16px;
+    color: var(--dark-soft);
+}
+
+.list {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--dark-soft);
+}
+
+.list li {
+    margin-bottom: 8px;
+}
+
+/* ========== GRID ========== */
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* ========== COURSES ========== */
+.course-list {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.875rem;
+    color: var(--dark-soft);
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.course-list li {
+    margin-bottom: 6px;
+}
+
+/* ========== PROJECTS ========== */
+.project {
+    padding: 20px;
+}
+
+.project h3 {
+    font-size: 1.1rem;
+    margin: 0 0 8px;
+}
+
+.project a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+.project .small {
+    font-size: 0.8rem;
+    color: var(--gray);
+    margin: 8px 0 0;
+}
+
+/* ========== TEACHERS ========== */
+.center {
+    text-align: center;
+}
+
+#teachers h2 {
+    display: block;
+    text-align: center;
+    border-top: none;
+    margin-bottom: 32px;
+}
+
+.teachers-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.teachers-row:last-child {
+    margin-bottom: 0;
+}
+
+.teacher {
+    text-align: center;
+    max-width: 260px;
+}
+
+.teacher img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    aspect-ratio: 220 / 320;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    border: 5px solid #9a6b3d;
+    background: #fff;
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 12px;
+}
+
+.teacher b {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 8px;
+    color: var(--dark);
+}
+
+.teacher p {
+    margin: 4px 0 0;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+/* ========== FOOTER โทนสบายตา ========== */
+footer {
+    background: #0f1422;
+    color: #e2e8f0;
+    padding: var(--space-section) 0;
+    padding-bottom: calc(var(--space-section) + var(--safe-bottom));
+    margin-top: var(--space-section);
+}
+
+/* รั้วติดกล่องดำ: ไม่มีช่องว่างระหว่างรั้วกับฟุตเตอร์ */
+.fence + footer {
+    margin-top: 0;
+}
+
+footer .container {
+    max-width: 600px;
+}
+
+footer h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+footer p {
+    margin: 0 0 12px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+footer .small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-top: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========== MOBILE – 768px ลงมา (เมนูแบบปุ่มเปิด) ========== */
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 65px;
+    }
+
+    :root {
+        --space-edge: 20px;
+        --space-section: 32px;
+    }
+
+    .container {
+        padding: 0 var(--space-edge);
+    }
+
+    header {
+        --header-h: 56px;
+    }
+
+    nav {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding-bottom: 0;
+        min-height: var(--header-h);
+    }
+
+    .brand {
+        width: auto;
+        max-width: calc(100% - 56px);
+        padding-bottom: 0;
+        border-bottom: none;
+        margin-bottom: 0;
+        justify-content: flex-start;
+        text-align: left;
+        gap: 8px;
+    }
+
+    .brand > div:last-child {
+        font-size: 0.7rem;
+        line-height: 1.3;
+        max-width: none;
+        word-break: keep-all;
+    }
+
+    .menu-toggle {
+        display: flex;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        border-radius: var(--radius);
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+
+    .menu-toggle:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .menu-toggle svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .menu-toggle[aria-expanded="true"] .icon-open {
+        display: none;
+    }
+
+    .menu-toggle .icon-close {
+        display: none;
+    }
+
+    .menu-toggle[aria-expanded="true"] .icon-close {
+        display: block;
+    }
+
+    /* เมนูเลื่อนจากขวา เปิดด้วยปุ่ม */
+    .menu {
+        position: fixed;
+        top: calc(var(--header-h) + var(--safe-top));
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        background: #fff8ec;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 16px;
+        gap: 4px;
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: transform 0.25s ease, visibility 0.25s;
+        overflow-y: auto;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+        z-index: 99;
+    }
+
+    .menu.is-open {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    .menu a {
+        padding: 14px 16px;
+        font-size: 1rem;
+        border-radius: var(--radius);
+        display: block;
+        color: var(--dark);
+    }
+
+    .menu a:hover {
+        background: rgba(154, 107, 61, 0.1);
+    }
+
+    .hero {
+        padding: var(--space-section) 0 calc(var(--space-section) + 8px);
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-visual {
+        padding: 16px;
+    }
+
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: var(--space-section) 0;
+    }
+
+    section h2 {
+        font-size: 1.35rem;
+        margin-bottom: 20px;
+    }
+
+    .course-list {
+        max-height: 280px;
+    }
+
+    .teachers-row.one .teacher,
+    .teachers-row.two .teacher {
+        max-width: 100%;
+    }
+
+    .teacher img {
+        max-width: 200px;
+    }
+}
+
+/* จอเล็กมาก (มือถือแนวตั้ง) – แบรนด์ยังเห็นได้ */
+@media (max-width: 380px) {
+    .brand > div:last-child {
+        font-size: 0.65rem;
+    }
+}
+
+/* ========== ธีมฟาร์ม: หิมะ รั้ว หมู โรงนา ไก่ ไข่ ========== */
+
+/* หิมะตกแบบสุ่ม (เกล็ดสร้างด้วย JS) */
+.snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.snowflake {
+    position: absolute;
+    top: -20px;
+    color: #fff;
+    font-size: 14px;
+    opacity: 0.7;
+    user-select: none;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
+    animation: snowDrift linear infinite;
+}
+
+.snowflake::before {
+    content: "❄";
+}
+
+@keyframes snowDrift {
+    0% { transform: translateY(0) translateX(0); }
+    25% { transform: translateY(25vh) translateX(8px); }
+    50% { transform: translateY(50vh) translateX(-6px); }
+    75% { transform: translateY(75vh) translateX(5px); }
+    100% { transform: translateY(100vh) translateX(0); }
+}
+
+/* รั้วไม้ฟาร์ม โทนอ่อน – อยู่บนแถบฟุตเตอร์ */
+.fence {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 88px;
+    margin: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        90deg,
+        #9a6b3d 0,
+        #9a6b3d 16px,
+        #6d4a2a 16px,
+        #6d4a2a 20px,
+        transparent 20px,
+        transparent 68px
+    );
+}
+
+.fence::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: #7d5530;
+    box-shadow: 0 32px 0 #7d5530;
+}
+
+/* ธีมฟาร์ม – มือถือ: ลดขนาดองค์ประกอบตกแต่ง */
+@media (max-width: 768px) {
+    .fence { height: 64px; }
+    .fence::before { box-shadow: 0 24px 0 #7d5530; }
+    .barn { right: 16px; bottom: 72px; width: 100px; height: 82px; }
+    .barn::before { border-left: 68px solid transparent; border-right: 68px solid transparent; border-bottom: 42px solid #a84a3d; top: -42px; left: -14px; }
+    .barn::after { width: 32px; height: 48px; }
+}
