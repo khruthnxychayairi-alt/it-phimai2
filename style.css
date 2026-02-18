@@ -1,220 +1,233 @@
-:root{
---primary:#4da3ff;
---dark:#1e293b;
---light:#eef3f9;
---accent:#7dd3fc;
-}
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แผนกเทคโนโลยีสารสนเทศ - วิทยาลัยเทคนิคพิมาย</title>
 
-*{box-sizing:border-box}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-body{
-margin:0;
-font-family:"Noto Sans Thai",system-ui,Arial,sans-serif;
-color:#1e293b;
+<link rel="stylesheet" href="style.css">
+</head>
 
-/* พื้นหลังสบายตา */
-background:
-radial-gradient(circle at 20% 20%, #ffffff 0%, transparent 35%),
-radial-gradient(circle at 80% 30%, #f0f6ff 0%, transparent 40%),
-linear-gradient(180deg,#f7fafe,#eef3f9);
+<body>
 
-line-height:1.8;
-font-size:18px;
-}
+<header>
+<div class="container">
+<nav>
+<div class="brand">
+<div class="logo">IT</div>
+<div>แผนกเทคโนโลยีสารสนเทศ • วิทยาลัยเทคนิคพิมาย</div>
+</div>
 
+<div class="menu">
+<a href="#top">หน้าแนะนำแผนก</a>
+<a href="#about">เกี่ยวกับแผนก</a>
+<a href="#courses">หลักสูตร</a>
+<a href="#projects">ผลงานนักศึกษา</a>
+<a href="#teachers">ครูผู้สอน</a>
+</div>
+</nav>
+</div>
+</header>
 
-a{text-decoration:none;color:inherit}
+<!-- HERO -->
+<section class="hero" id="top">
+<div class="container hero-inner">
 
-.container{max-width:1000px;margin:auto;padding:0 16px}
+<div>
+<span class="pill">แผนกเทคโนโลยีสารสนเทศ</span>
+<h1>เรียนรู้ไอทีตั้งแต่พื้นฐาน ถึงพัฒนาโปรเจกต์จริง</h1>
+<p>
+เน้นทักษะที่ใช้ได้จริง เช่น เขียนโปรแกรม สร้างเว็บไซต์ ดูแลระบบเครือข่าย และความปลอดภัยไซเบอร์ พร้อมฝึกงานกับสถานประกอบการ
+</p>
+</div>
 
-header{
-position:sticky;
-top:0;
-background:rgba(255,255,255,0.7);
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
-border-bottom:1px solid rgba(0,0,0,.05);
-box-shadow:0 8px 25px rgba(0,0,0,.06);
-z-index:10
-}
+<div class="card hero-visual">
+<div class="grid grid-2">
 
+<div class="feature card">
+<div class="pill">ทักษะ</div>
+<h3>การเขียนโปรแกรม</h3>
+<p>HTML, CSS, JavaScript, Python, C#</p>
+</div>
 
-nav{
-display:flex;
-flex-direction:column;
-align-items:center;
-padding:12px 0
-}
+<div class="feature card">
+<div class="pill">ทักษะ</div>
+<h3>เครือข่าย</h3>
+<p>LAN/WAN, Router, Server</p>
+</div>
 
-.brand{display:flex;align-items:center;gap:10px;font-weight:700}
+<div class="feature card">
+<div class="pill">ทักษะ</div>
+<h3>ฐานข้อมูล</h3>
+<p>MySQL, SQL Server, Firebase</p>
+</div>
 
-.logo{
-width:36px;height:36px;border-radius:10px;
-background:linear-gradient(135deg,var(--primary),#6366f1);
-display:grid;place-items:center;color:#fff
-}
+<div class="feature card">
+<div class="pill">ทักษะ</div>
+<h3>ความปลอดภัยไซเบอร์</h3>
+<p>พื้นฐานความปลอดภัยไซเบอร์</p>
+</div>
 
-.menu{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px}
-.menu a{padding:8px 12px;border-radius:12px;font-weight:600}
-.menu a:hover{
-background:#e6f1ff;
-color:#2563eb;
-}
+</div>
+</div>
+</div>
+</section>
 
-.hero{background:linear-gradient(180deg,#f0f7ff,#f5f7fb)}
-.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;padding:60px 0}
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<h2>เกี่ยวกับแผนก</h2>
+<div class="card box">
+<p>
+แผนกเทคโนโลยีสารสนเทศ (Information Technology: IT) มุ่งพัฒนาผู้เรียนให้มีความรู้ด้านคอมพิวเตอร์ เครือข่าย และการพัฒนาซอฟต์แวร์ สามารถสร้างผลงานจริงและทำงานร่วมกับผู้อื่นได้ พร้อมคุณธรรมและจริยธรรมในการใช้เทคโนโลยี
+</p>
 
-.card{
-background:#fff;
-border:1px solid #e6eaf2;
-border-radius:20px;
-box-shadow:0 8px 18px rgba(2,6,23,.05)
-}
+<ul class="list">
+<li>เรียนแบบลงมือปฏิบัติ (Project-Based Learning)</li>
+<li>มีอาจารย์ที่ปรึกษาโครงงาน</li>
+<li>ฝึกงานกับบริษัท/หน่วยงานจริง</li>
+</ul>
+</div>
+</div>
+</section>
 
-.grid{display:grid;gap:16px}
-.grid-2{grid-template-columns:1fr 1fr}
-.grid-3{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
+<!-- COURSES -->
+<section id="courses">
+<div class="container">
+<h2>หลักสูตร</h2>
 
+<div class="grid grid-3">
 
-section{padding:56px 0}
-h2{text-align:center}
+<div class="card feature">
+<div class="pill">ปีที่ 1</div>
+<h3>พื้นฐานคอมพิวเตอร์</h3>
+<p>การใช้ระบบปฏิบัติการ ฮาร์ดแวร์ และซอฟต์แวร์สำนักงาน</p>
+</div>
 
-.pill{
-display:inline-block;
-background:#ecfeff;
-border:1px solid #bae6fd;
-color:#0369a1;
-padding:6px 10px;
-border-radius:999px;
-font-size:13px
-}
+<div class="card feature">
+<div class="pill">ปีที่ 2</div>
+<h3>เขียนโปรแกรม & เว็บไซต์</h3>
+<p>HTML, CSS, JavaScript และพื้นฐานฐานข้อมูล</p>
+</div>
 
-.feature{padding:18px}
-.project{padding:18px}
+<div class="card feature">
+<div class="pill">ปีที่ 3</div>
+<h3>เครือข่าย & เซิร์ฟเวอร์</h3>
+<p>ติดตั้งเครือข่าย จัดการผู้ใช้ และดูแลระบบ</p>
+</div>
 
-.list li{margin:8px 0}
+<div class="card feature">
+<div class="pill">ปีที่ 4</div>
+<h3>โครงงาน (Project)</h3>
+<p>พัฒนาแอป/เว็บไซต์จริง พร้อมนำเสนอผลงาน</p>
+</div>
 
-.teachers{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-max-width:900px;
-margin:auto;
-}
+<div class="card feature">
+<div class="pill">เสริม</div>
+<h3>ความปลอดภัยไซเบอร์</h3>
+<p>แนวคิดป้องกันภัยคุกคามและการใช้งานอย่างปลอดภัย</p>
+</div>
 
-.teacher{text-align:center}
-.teacher img{
-width:200px;
-height:300px;
-object-fit:cover;
-border-radius:14px;
-box-shadow:0 6px 16px rgba(0,0,0,.15)
-}
+<div class="card feature">
+<div class="pill">เสริม</div>
+<h3>กราฟิก & มัลติมีเดีย</h3>
+<p>ออกแบบ UI/UX และตัดต่อวิดีโอพื้นฐาน</p>
+</div>
 
-footer{
-background:#0b1220;
-color:#e2e8f0;
-padding:30px 0;
-margin-top:40px
-}
+</div>
+</div>
+</section>
 
-.center{text-align:center}
-.small{font-size:13px;color:#94a3b8}
+<!-- PROJECTS -->
+<section id="projects">
+<div class="container">
+<h2>ผลงานนักศึกษา</h2>
 
-@media(max-width:900px){
-.hero-inner{grid-template-columns:1fr}
-.grid-2,.grid-3{grid-template-columns:1fr}
-}
-.teachers-row{
-display:flex;
-justify-content:center;
-gap:40px;
-margin-bottom:40px;
-flex-wrap:wrap;
-}
+<div class="grid grid-3">
+<div class="card project">
+<span class="tag">Web App</span>
+<h3>ระบบเช็คชื่อออนไลน์</h3>
+<p class="small">ใช้ HTML/CSS/JS + Firebase</p>
+</div>
 
-.teachers-row.one .teacher{
-width:260px;
-}
-.teacher b{
-display:block;
-text-align:center;
-font-size:20px;
-margin-top:8px;
-}
+<div class="card project">
+<span class="tag">Mobile</span>
+<h3>แอปจองห้องเรียน</h3>
+<p class="small">Flutter + Database</p>
+</div>
 
-.teacher p{
-text-align:center;
-margin-top:4px;
-}
+<div class="card project">
+<span class="tag">IoT</span>
+<h3>ระบบรดน้ำอัตโนมัติ</h3>
+<p class="small">ESP8266 + Sensor</p>
+</div>
+</div>
+</div>
+</section>
 
-.teachers-row.two .teacher{
-width:240px;
-}
+<!-- TEACHERS -->
+<section id="teachers">
+<h2 class="center">ครูผู้สอน</h2>
 
-.teacher{
-text-align:center;
-}
+<!-- แถวที่ 1 -->
+<div class="teachers-row one">
+    <div class="teacher">
+        <img src="1.jpg">
+        <b>ว่าที่ร.ต.วัชรินทร์ สิทธิจันทร์</b>
+        <p>หัวหน้า แผนกเทคโนโลยีสารสนเทศ</p>
+    </div>
+</div>
 
-.teacher img{
-width:220px;
-height:320px;
-object-fit:cover;
-border-radius:16px;
-box-shadow:0 8px 18px rgba(0,0,0,.18);
-margin-bottom:10px;
-}
-.teacher b{
-display:block;
-text-align:center;
-font-size:20px;
-margin-top:8px;
-}
+<!-- แถวที่ 2 -->
+<div class="teachers-row two">
+    <div class="teacher">
+        <img src="2.jpg">
+        <b>นายวรวุฒิ พุฒกลาง</b>
+        <p>ครู ชำนาญการพิเศษ</p>
+    </div>
 
-.teacher p{
-text-align:center;
-margin-top:4px;
-}
-.course-list{
-    margin: 5px 0;
-    padding-left: 18px;
-}
-.course-list li{
-    margin: 3px 0;
-}
+    <div class="teacher">
+        <img src="3.jpg">
+        <b>นางฐิตาพร ตีรวัฒนประภา</b>
+        <p>ครูผู้ช่วย</p>
+    </div>
+</div>
 
-/* SNOW EFFECT */
+<!-- แถวที่ 3 -->
+<div class="teachers-row one">
+    <div class="teacher">
+        <img src="4.jpg">
+        <b>นางสาวขวัญฤทัย ยิ่งแก้ว</b>
+        <p>ครูอัตราจ้าง</p>
+    </div>
+</div>
 
-/* ===== SCROLL ANIMATION ===== */
-
-/* สถานะเริ่มต้น (ยังไม่โผล่) */
-.reveal{
-opacity:0;
-transform:translateY(40px);
-transition:
-opacity 0.9s cubic-bezier(.2,.65,.3,1),
-transform 0.9s cubic-bezier(.2,.65,.3,1);
-}
-
-/* ตอนปรากฏ */
-.reveal.show{
-opacity:1;
-transform:translateY(0);
-}
-
-/* ให้แต่ละกล่องโผล่ไม่พร้อมกัน */
-.reveal-delay-1{transition-delay:.1s}
-.reveal-delay-2{transition-delay:.2s}
-.reveal-delay-3{transition-delay:.3s}
-.reveal-delay-4{transition-delay:.4s}
+</section>
 
 
+<footer>
+<div class="container center">
+<h3>โครงงานเว็บไซต์แผนกเทคโนโลยีสารสนเทศ</h3>
+<p>วิทยาลัยเทคนิคพิมาย</p>
+<p>ปีการศึกษา 2568</p>
 
+<p><b>ผู้จัดทำ</b></p>
+<p>
+1) ชัยศิริ ครุธน้อย<br>
+2) นางสาวภัทรภา โปยขุนทด<br>
+3) นายปฏิพล สุมรัมย์
+</p>
 
+<p><b>ครูที่ปรึกษา</b></p>
+<p>ว่าที่ร.ต.วัชรินทร์ สิทธิจันทร์</p>
 
+<p class="small">เว็บไซต์นี้จัดทำเพื่อการศึกษา</p>
+</div>
+</footer>
 
-
+</body>
+</html>
